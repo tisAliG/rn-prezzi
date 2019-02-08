@@ -1,0 +1,135 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h1>React Native</h1>
+					<h5>Ali Groening</h5>
+				</section>
+				<section>
+					<h3>React vs React Native</h3>
+					<ul>
+						<li>Enviornment Setup</li>
+						<li>Markup</li>
+						<li>Styles</li>
+						<li>iOs & Android</li>
+						<li>Project Setup</li>
+					</ul>
+				</section>
+				<section>
+					<section>
+						<h3>Enviornment Setup</h3>
+						<ul>
+							<li>Android Studio</li>
+							<li>Xcode</li>
+							<li>Emulators</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Expo</h3>
+						<ul>
+							<li>A workflow with a GUI, as well as a CLI to create and run your app</li>
+							<li>includes a bunch of APIs, ex: geolocation</li>
+							<li>includes it's own set of developer tools</li>
+							<li>makes it easier to publish your app to iTunes and Google Play</li>
+							<li>can open up an iOs simulator straight from terminal, but not an android emulator</li>
+							<li>requires expo to be downloaded to the device you are testing</li>
+							<!-- <li>you can eject from expo to create the exisiting project as a "pure" RN App instead of being bootstrapped to Expo</li> -->
+						</ul>
+					</section>
+					<section>
+						<h3>React-Native cli</h3>
+						<ul>
+							<li>Creates a "pure" RN App, since all of the native code is available to the dev</li>
+							<li>this allows the dev to add native modules</li>
+							<li>creates a smaller app rather than having all the extras that come with expo</li>
+							<li>you can run the app directly in Android Studio/Xcode since the native code is exposed</li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<h3>Markup</h3>
+					<ul>
+						<li>View === Div</li>
+						<li>Text === Paragraph</li>
+						<li>Button/TouchableOpacity === Button/Link</li>
+						<li>Image === Image</li>
+						<li>TextInput === Input/Textarea</li>
+						<li>UL, Radio</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Styles</h3>
+					<ul>
+						<li>Inline styles via style property</li>
+						<li>Class-like styles</li>
+						<li>Properties are camelcased: <code>margin-right marginRight</code></li>
+						<li>Properties do not allow multiple arguments: <code>margin: 0 10;</code></li>
+						<li>No Units: <code>margin: 10</code></li>
+						<li>Flexbox</li>
+					</ul>
+				</section>
+				<section>
+					<h3>iOs & Android</h3>
+					<ul>
+						<li>Some components are only compatible with one system</li>
+						<li>Some components are styled out of the box per their system</li>
+						<li>Some components will require extra setup within their own system</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Code Examples</h2>
+				</section>
+				<section>
+					<h3>Randomness</h3>
+					<ul>
+						<li>SVGs are not performant</li>
+						<li>You can view the console, but you have to pull it up in chrome</li>
+					</ul>
+				</section>
+				<section>
+					<h3>End</h3>
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
